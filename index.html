@@ -3,144 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blossom Hardware - Spesialis Perlengkapan Komputer</title>
+    <title>Blossom Hardware - Mekarkan Potensimu</title>
+	<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Untuk ikon, opsional -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts: Poppins (Headline), Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Blossom Hardware</a>
-            <ul class="nav-links">
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#products">Produk</a></li>
-                <li><a href="#features">Fitur</a></li>
-                <li><a href="#contact">Kontak</a></li>
-                <li><a href="#" class="nav-btn">Belanja Sekarang</a></li>
-            </ul>
-            <button class="hamburger-menu" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Blossom Hardware</a>
+                <!-- Hamburger menu icon -->
+                <div class="hamburger" id="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#categories">Kategori</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#support">Dukungan</a></li>
+                    <li><a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content container">
+            <h1>Mekarkan Potensimu dengan Performa Tak Tertandingi.</h1>
+            <p>Temukan komponen PC terbaik untuk gaming, kreasi, dan produktivitas dengan kualitas premium.</p>
+            <button class="btn primary-btn" onclick="document.location.href='#products'">Jelajahi Produk Sekarang <i class="fas fa-arrow-right"></i></button>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Bangun & Rawat PC Impian Anda Bersama Kami</h2>
-                <p>Selamat datang di Blossom Hardware! Kami adalah toko spesialis perlengkapan komputer yang menyediakan berbagai kebutuhan hardware PC berkualitas dengan harga kompetitif. Baik Anda seorang gamer, profesional, maupun pelajar, kami siap membantu Anda membangun dan merawat PC impian Anda.</p>
-                <a href="#products" class="btn">Lihat Produk Populer</a>
+    <main>
+        <section id="categories" class="featured-categories section-padding">
+			<div class="container">
+				<h2>Pilih Performa Impianmu</h2>
+				<div class="category-grid">
+					<div class="category-item">
+						<i class="fas fa-microchip icon"></i>
+						<h3>Prosesor</h3>
+						<p>Tenaga inti untuk segala skenario. Dari gaming hingga rendering.</p>
+						<a href="#" class="btn secondary-btn">Lihat Prosesor <i class="fas fa-chevron-right"></i></a>
+					</div>
+					<div class="category-item">
+						<i class="fas fa-desktop icon"></i>
+						<h3>Kartu Grafis</h3>
+						<p>Visual Ultra HD, framerate ekstrem, pengalaman tak terlupakan.</p>
+						<a href="#" class="btn secondary-btn">Lihat GPU <i class="fas fa-chevron-right"></i></a>
+					</div>
+					<div class="category-item">
+						<i class="fas fa-hdd icon"></i>
+						<h3>Penyimpanan</h3>
+						<p>Kecepatan kilat SSD, kapasitas masif HDD. Simpan semua datamu.</p>
+						<a href="#" class="btn secondary-btn">Lihat Storage <i class="fas fa-chevron-right"></i></a>
+					</div>
+					<div class="category-item">
+						<i class="fas fa-memory icon"></i>
+						<h3>Memori (RAM)</h3>
+						<p>Multitasking lancar, performa responsif, tanpa lag berarti.</p>
+						<a href="#" class="btn secondary-btn">Lihat RAM <i class="fas fa-chevron-right"></i></a>
+					</div>
+					<div class="category-item">
+						<i class="fas fa-sitemap icon"></i>
+						<h3>Motherboard</h3>
+						<p>Papan utama yang menghubungkan semua komponen penting PC Anda.</p>
+						<a href="#" class="btn secondary-btn">Lihat Mobo <i class="fas fa-chevron-right"></i></a>
+					</div>
+					<div class="category-item">
+						<i class="fas fa-plug icon"></i>
+						<h3>Power Supply</h3>
+						<p>Sumber daya stabil untuk performa puncak sistem Anda.</p>
+						<a href="#" class="btn secondary-btn">Lihat PSU <i class="fas fa-chevron-right"></i></a>
+					</div>
+				</div>
+			</div>
+        </section>
+
+        <section id="products" class="product-showcase container section-padding">
+			<div class="container">
+				<h2>Produk Unggulan Kami</h2>
+				<div class="product-grid">
+					<!-- Produk 1 -->
+					<div class="product-card">
+						<img src="RTX 5080.jpg" alt="NVIDIA GeForce RTX 5080">
+						<div class="card-content">
+							<h3>NVIDIA GeForce RTX 5080</h3>
+							<p class="price">Rp 22.500.000</p>
+							<button class="btn primary-btn">Tambahkan ke Keranjang <i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
+					<!-- Produk 2 -->
+					<div class="product-card">
+						<img src="RX 580.jpg" alt="AMD Radeon RX 580">
+						<div class="card-content">
+							<h3>AMD Radeon RX 580</h3>
+							<p class="price">Rp 2.800.000</p>
+							<button class="btn primary-btn">Tambahkan ke Keranjang <i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
+					<!-- Produk 3 -->
+					<div class="product-card">
+						<img src="i5 13600K.jpg" alt="Intel Core i5-13600K">
+						<div class="card-content">
+							<h3>Intel Core i5-13600K</h3>
+							<p class="price">Rp 4.200.000</p>
+							<button class="btn primary-btn">Tambahkan ke Keranjang <i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
+					<!-- Produk 4 (Tambahan) -->
+					<div class="product-card">
+						<img src="R9 7950X.jpg" alt="AMD Ryzen 9 7950X">
+						<div class="card-content">
+							<h3>AMD Ryzen 9 7950X</h3>
+							<p class="price">Rp 10.500.000</p>
+							<button class="btn primary-btn">Tambahkan ke Keranjang <i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
+					<!-- Produk 5 (Tambahan) -->
+					<div class="product-card">
+						<img src="R5 7600.jpg" alt="AMD Ryzen 5 7600">
+						<div class="card-content">
+							<h3>AMD Ryzen 5 7600</h3>
+							<p class="price">Rp 3.500.000</p>
+							<button class="btn primary-btn">Tambahkan ke Keranjang <i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
+					<!-- Produk 6 (Tambahan) -->
+					<div class="product-card">
+						<img src="GTX 1080Ti.jpg" alt="Nvidia GTX 1080 Ti">
+						<div class="card-content">
+							<h3>NVIDIA GTX 1080 Ti</h3>
+							<p class="price">Rp 5.000.000</p>
+							<button class="btn primary-btn">Tambahkan ke Keranjang <i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <section id="about" class="why-choose-us section-padding">
+            <div class="container">
+                <h2>Blossom Hardware: Pilihan Para Profesional</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-boxes icon"></i>
+                        <h3>Pilihan Terlengkap</h3>
+                        <p>Ribuan komponen dari merek terkemuka, siap penuhi setiap rakitan impianmu.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt icon"></i>
+                        <h3>Jaminan Kualitas</h3>
+                        <p>Setiap produk dijamin original dan bergaransi resmi. Kualitas yang bisa diandalkan.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset icon"></i>
+                        <h3>Dukungan Premium</h3>
+                        <p>Tim ahli kami siap membantu setiap pertanyaan dan kebutuhanmu.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-truck icon"></i>
+                        <h3>Pengiriman Cepat</h3>
+                        <p>Pesananmu akan tiba dengan aman dan cepat, siap untuk dirakit.</p>
+                    </div>
+					<div class="feature-item">
+						<i class="fas fa-award icon"></i> <!-- Ikon baru -->
+						<h3>Garansi Resmi</h3>
+						<p>Produk dengan garansi pabrik resmi, ketenangan pikiran terjamin.</p>
+					</div>
+					<!-- Item Tambahan 2 -->
+					<div class="feature-item">
+						<i class="fas fa-exchange-alt icon"></i> <!-- Ikon baru -->
+						<h3>Kebijakan Retur Mudah</h3>
+						<p>Proses retur dan penukaran yang transparan dan tidak merepotkan.</p>
+					</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-signup section-padding">
+            <div class="container">
+                <h2>Jangan Lewatkan Update Terbaru!</h2>
+                <p>Jadilah yang pertama tahu tentang promo eksklusif, rilis produk terbaru, dan berita dunia hardware PC.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Masukkan alamat email Anda" required>
+                    <button type="submit" class="btn primary-btn">Berlangganan <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">Blossom Hardware</a>
+                <p>Sumber terpercaya untuk komponen PC premium. Mekarkan potensimu!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navigasi Cepat</h3>
+                <ul>
+                    <li><a href="#products">Produk Unggulan</a></li>
+                    <li><a href="#categories">Kategori</a></li>
+                    <li><a href="#about">Mengapa Kami</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Supriadi No. 5 Gg. 7, Jakarta, Indonesia</p>
+                <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@blossomhardware.com</p>
             </div>
         </div>
-    </section>
-
-    <section id="features" class="container sections">
-        <div class="section-item">
-            <h3>Komponen Utama PC</h3>
-            <p>Prosesor, motherboard, RAM, kartu grafis, dan penyimpanan dari merek terkemuka.</p>
-        </div>
-        <div class="section-item">
-            <h3>Aksesoris Lengkap</h3>
-            <p>Keyboard, mouse, monitor, headset, dan banyak lagi untuk melengkapi setup Anda.</p>
-        </div>
-        <div class="section-item">
-            <h3>Kualitas & Harga Terbaik</h3>
-            <p>Kami menjamin produk berkualitas dengan penawaran harga yang sangat kompetitif.</p>
-        </div>
-    </section>
-
-    <!-- Bagian Produk Populer Baru -->
-    <section id="products" class="popular-products">
-        <div class="container">
-            <h2>Produk Populer Kami</h2>
-            <div class="product-grid">
-                <!-- Produk 1 -->
-                <div class="product-card">
-                    <img src="ryzen9.jpg" alt="Prosesor AMD Ryzen">
-                    <div class="product-card-content">
-                        <h3>AMD Ryzen 9 7950X</h3>
-                        <p>Performa luar biasa untuk gaming dan multitasking. 16 Cores, 32 Threads.</p>
-                        <span class="price">Rp 6.000.000</span>
-                        <a href="#" class="add-to-cart">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <!-- Produk 2 -->
-                <div class="product-card">
-                    <img src="rtx5080.png" alt="Kartu Grafis NVIDIA RTX">
-                    <div class="product-card-content">
-                        <h3>NVIDIA GeForce RTX 5080</h3>
-                        <p>Nikmati grafis menakjubkan dengan ray tracing dan DLSS generasi ke-2.</p>
-                        <span class="price">Rp 10.000.000</span>
-                        <a href="#" class="add-to-cart">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <!-- Produk 3 -->
-                <div class="product-card">
-                    <img src="rx580.png" alt="RAM DDR4 Corsair Vengeance">
-                    <div class="product-card-content">
-                        <h3>AMD Radeon RX 580</h3>
-                        <p>GPU dengan performa luar biasa untuk harganya.</p>
-                        <span class="price">Rp 700.000</span>
-                        <a href="#" class="add-to-cart">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn" style="margin-top: 40px;">Lihat Semua Produk</a>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-info">
-        <div class="container">
-            <h2>Kunjungi atau Hubungi Kami!</h2>
-            <p>Kami tunggu kedatangan Anda di Blossom Hardware!</p>
-            <p><strong>Lokasi Kami:</strong> Jakarta, Jl. Supriadi No. 5 Gg. 7</p>
-            <p><strong>Telepon:</strong> <a href="tel:0812-3456-7890" style="color:#fff; text-decoration:none;">0812-3456-7890</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Blossom Hardware. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blossom Hardware. Hak Cipta Dilindungi.</p>
+            <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat & Ketentuan</a></p>
         </div>
     </footer>
 	
-	<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 	<script type="module">
 	  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 	  createChat({
 		webhookUrl: 'https://abiyogachandra.app.n8n.cloud/webhook/a889d2ae-2159-402f-b326-5f61e90f602e/chat',
 		initialMessages: [
-			'Halo, saya adalah pembantu Blossom Hardware. Apakah ada yang bisa saya bantu? 😊'
+			'Selamat datang di Blossom Hardware! 👋',
+			'Apakah ada yang bisa saya bantu? 😊'
 		],
 		i18n: {
-		en: {
-			title: 'Pembantu Blossom Hardware',
-			subtitle: "Halo! 👋 Saya bisa membantu kamu 24/7.",
-			footer: '',
-			getStarted: 'New Conversation',
-			inputPlaceholder: 'Ketik pertanyaan...',
-		},
-	},
+			en: {
+				title: 'Hi there! 👋',
+				subtitle: "Start a chat. We're here to help you 24/7.",
+				footer: '',
+				getStarted: 'New Conversation',
+				inputPlaceholder: 'Ketik pertanyaann...',
+			},
+		}
 	  });
 	</script>
-
     <script>
-        // JavaScript untuk Toggle Navbar di Mobile
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const navLinks = document.querySelector('.nav-links');
+        // JavaScript for Hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('#nav-menu li a'); // Get all navigation links
 
-        hamburgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
 
-        // Menutup navbar saat link diklik (untuk mobile)
-        document.querySelectorAll('.nav-links li a').forEach(item => {
-            item.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
+            // Close the mobile menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close the mobile menu if clicked outside of it (optional, but good UX)
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
                 }
             });
         });
